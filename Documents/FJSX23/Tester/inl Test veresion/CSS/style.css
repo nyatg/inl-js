@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", "Lato", sans-serif;
+}
+
+body {
+  background-color: #dcd3d1;
+}
+
+header,
+footer {
+  background-color: #503b31;
+  border-radius: 10px;
+}
+
+header a,
+footer a {
+  color: #dcd3d1;
+}
+/*--------header----------*/
+
+header {
+  padding: 20px;
+}
+
+.header-ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home {
+  font-weight: bold;
+  background-color: #dcd3d1;
+  color: #2f221c;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+header a:hover {
+  background-color: #dcd3d1;
+  color: #2f221c;
+  border-radius: 10px;
+}
+
+/*------about me------*/
+
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  gap: 10px;
+}
+
+.profile-pic {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  /* border: #2f221c solid; */
+  border-radius: 50px;
+}
+
+.about-me-text {
+  border: solid;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #dcd3d1;
+  background-color: #503b31;
+}
+
+h1 {
+  color: #503b31;
+  border: #dbd0ce solid;
+  background-color: #dbd0ce;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.about-me-text p {
+  padding: 20px;
+}
+
+.about-me-text a {
+  color: #dbd0ce;
+}
+
+/*---- PROJECT----*/
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  align-self: center;
+  color: #2f221c;
+}
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #503b31;
+  border-radius: 10px;
+}
+
+.card img {
+  border-radius: 10px;
+  max-width: 40vw;
+  height: 100%;
+  margin: 5px;
+}
+
+.card a {
+  border: #2f221c solid;
+  border-radius: 6px;
+  background-color: #dcd3d1;
+  color: #2f221c;
+  text-decoration: none;
+  padding: 2px;
+  margin: 3px;
+}
+
+.card a:hover {
+  color: #dbd0ce;
+  background-color: #2f221c;
+  border: solid #dbd0ce;
+}
+
+/*----Footer-----*/
+
+footer {
+  /* border: solid; */
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  color: #2f221c;
+}
+
+footer a:hover {
+  color: #b07b62;
+}
+
+/* -----Desktop/iPad version----*/
+
+@media (min-width: 425px) {
+  /* --ABOUT ME-- */
+  .about-me-section {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-around;
+    max-height: 50vh;
+  }
+
+  .profile-pic {
+    min-width: 50%;
+    /* border: solid  #2f221c; */
+    background-color: #503b31;
+    border-radius: 50px;
+  }
+
+  /*--PROJEKT--*/
+
+  .project-section {
+    margin: 1rem;
+    color: #2f221c;
+  }
+
+  .card-section {
+    justify-content: space-evenly;
+    /* border: solid magenta; */
+    display: flex;
+  }
+
+  .card img {
+    max-width: 18vh;
+    height: 100%;
+  }
+}

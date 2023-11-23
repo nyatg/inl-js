@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", "Lato", sans-serif;
+}
+
+body {
+  background-color: #dcd3d1;
+}
+
+header,
+footer {
+  background-color: #503b31;
+  border-radius: 5px;
+}
+
+main {
+  display: flex;
+}
+
+/*---Färg---*/
+header a,
+footer a {
+  color: #dcd3d1;
+}
+
+.side-nav {
+  background-color: #503b31;
+}
+
+.side-nav a {
+  color: #dcd3d1;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.side-nav a:hover {
+  border-radius: 10px;
+  background-color: #dcd3d1;
+  color: #2f221c;
+  font-weight: bold;
+}
+
+/*--------header----------*/
+
+header {
+  padding: 20px;
+  border-bottom: #dcd3d1 solid;
+}
+
+.header-ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.about {
+  font-weight: bold;
+  background-color: #dcd3d1;
+  color: #2f221c;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+header a:hover {
+  background-color: #dcd3d1;
+  color: #2f221c;
+  border-radius: 10px;
+}
+/*---- SIDE NAV ----*/
+
+.side-nav {
+  min-width: 15vw;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+}
+
+.side-li {
+  margin: 30px 5px 0 3px;
+}
+
+/* --- OM MIG INFO--*/
+
+.about-intro {
+  padding: 30px;
+  color: #2f221c;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+/* --- FOOTER---*/
+
+footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  border-top: #dcd3d1 solid;
+}
+
+footer a:hover {
+  color: #b07b62;
+}
+
+@media (max-width: 700px) {
+  .side-nav {
+    min-width: 30vw;
+  }
+}

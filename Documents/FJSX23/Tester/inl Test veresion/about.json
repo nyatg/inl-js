@@ -1,0 +1,54 @@
+{
+    "about": {
+        "mainHeader": "Mitt CV",
+        "mainAbout": "Genom att trycka på knapparna till vänster får du en inblick i mina rika erfarenheter både inom arbetslivet och livet som helhet. Upptäck de spännande projekten, utmaningarna och lärdomarna som format min resa hittills. Klicka dig igenom för att lära dig mer!"
+    },
+    "omMig": {
+        "name": "Nyat",
+        "info": "Jag är Nyat Ghirmazion, en nyutbildad beteendevetare med en passion för psykologi och dess påverkan på mänskligt beteende. Efter att ha utforskat dessa områden och vuxit som professionell ser jag nu fram emot en spännande förändring: att bli fullstackutvecklare. Denna övergång kommer låta mig kombinera min problemlösningsförmåga med min kärlek för teknik. När jag inte fördjupar mig i koden och skapar digitala lösningar, finner du mig oftast njuta av oldschool R&B-musik. Det är min glädje att förena min passion för dessa två världar och se hur de kan komplettera varandra. Jag ser med spänning fram emot att utveckla innovativa och användarvänliga program, och är redo att omfamna den tekniska utmaningen som väntar."
+    },
+    "utbildningar": [
+        {
+            "utbildning": "Chas Academy",
+            "utbBeskrivning": "Fullstack JavaScript (pågående)"
+        },
+        {
+            "utbildning": "Mälardalens Universitet",
+            "utbBeskrivning": "Beteendevetenskapliga programmet, inriktning psykologi"
+        },
+        {
+            "utbildning": "Angeredsgymnasiet",
+            "utbBeskrivning": "Samhällsvetenskapliga programmet"
+        }
+    ],
+    "erfarenheter": [
+        {
+            "arbetsPlats": "Forex",
+            "arbetsBeskrivning": "Säljare"
+        },
+        {
+            "arbetsPlats": "Fritidsgård",
+            "arbetsBeskrivning": "Fritidsassistent"
+        },
+        {
+            "arbetsPlats": "Grundskola",
+            "arbetsBeskrivning": [
+                "Elevassistent",
+                "Lärarassistent",
+                "Vikare åk. 4-9"
+            ]
+        },
+        {
+            "arbetsPlats": "Volvo",
+            "arbetsBeskrivning": "Truckförare"
+        },
+        {
+            "arbetsPlats": "Telenor",
+            "arbetsBeskrivning": "Kundtjänstmedarbetare"
+        }
+    ],
+    "extra": {
+        "extraHeader": "Lorem",
+        "extraInfo": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique ut earum inventore autem quisquam totam enim temporibus eos pariatur, atque repellendus illum recusandae optio vero! Autem, porro temporibus velit quaerat at ipsa beatae nemo minus aperiam eaque expedita reiciendis labore voluptate dicta asperiores explicabo? Cupiditate ipsa placeat veniam accusamus nisi. Fuga impedit magni recusandae adipisci similique quam necessitatibus porro aliquam architecto quisquam earum beatae provident, sit perferendis eveniet rerum officia? Numquam adipisci, voluptatibus corrupti, aut ratione sit cum accusantium quia nulla, debitis labore quae atque necessitatibus dolore ipsam error corporis. Omnis porro alias perferendis veniam soluta pariatur quae deserunt rerum."
+    }
+}
