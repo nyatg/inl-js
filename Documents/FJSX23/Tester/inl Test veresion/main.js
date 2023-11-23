@@ -1,6 +1,7 @@
 const infoContainer = document.getElementById("info-container");
 console.log(infoContainer)
 
+
 async function getAbout() {
     // console.log("innuti getabout")
     const response = await fetch('./about.json');
@@ -16,6 +17,7 @@ async function getAbout() {
         showAboutMe(json);
         showEducationTitle(json);
         showExperience(json);
+        showExtra(json);
     } else {
         console.log("HTTP-error:" + response.status)
     }
@@ -82,13 +84,51 @@ function showExperience(jsonPart) {
     infoContainer.appendChild(experienceDiv);
 };
 
+function showExtra(jsonPart) {
+    const extraDiv = document.createElement("div");
+    infoContainer.appendChild(extraDiv);
 
+   { const extraHdr = document.createElement("h2");
+    extraHdr.textContent = jsonPart.extra.extraHeader;
+        extraDiv.appendChild(extraHdr);  
+    }
+   
+    {
+        const extraInf = document.createElement("p");
+        extraInf.textContent = jsonPart.extra.extraInfo;
+        extraDiv.appendChild(extraInf);
+    }
+
+}
+
+// EVENTLYSSNARE SOM TAR BORT OCH FRAM INFO:
+
+const omBtn = document.getElementById("om-btn");
+const utbBtn = document.getElementById("utb-btn");
+const erfBtn = document.getElementById("erf-btn");
+const extraBtn = document.getElementById("extra-btn");
+const aboutDiv = document.getElementById("info-container")
+
+omBtn.addEventListener("click", function () {
+    aboutDiv.innerHTML = "";
+    console.log("Clicked 'omBtn'")
+    // if (json) {
+    //     showAboutMe(json);
+    // } else {
+    //     console.log("JSON data not available");
+    // }
+});
+
+//  <li><button id="om-btn">Om mig</button></li>
+//                 <li><button id="utb-btn">Utbildningar</button></li>
+//                 <li><button id="erf-btn">Erfarenheter</button></li>
+//                 <li><button id="extra-btn">Extra</button></li>
 
 // document.addEventListener("DOMContentLoaded", async function () {
 //     const jsonData = await getAbout();
 //     // getAbout();
 
-    
+// 
 
     
 //     let aboutBtn = document.getElementById("about-btn")
