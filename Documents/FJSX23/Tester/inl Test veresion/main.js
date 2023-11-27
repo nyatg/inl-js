@@ -1,12 +1,12 @@
 const infoContainer = document.getElementById("info-container");
 console.log(infoContainer)
-
+let json; 
 
 async function getAbout() {
     // console.log("innuti getabout")
     const response = await fetch('./about.json');
     if (response.ok) {
-        const json = await response.json();
+        json = await response.json();
         console.log(json);
         // about = json.about;
         // omMig = json.omMig;
@@ -14,10 +14,10 @@ async function getAbout() {
         // erfarenheter = json.erfarenheter;
         // extra = json.extra;
         showAbout(json);
-        showAboutMe(json);
-        showEducationTitle(json);
-        showExperience(json);
-        showExtra(json);
+        // showAboutMe(json);
+        // showEducationTitle(json);
+        // showExperience(json);
+        // showExtra(json);
     } else {
         console.log("HTTP-error:" + response.status)
     }
@@ -29,7 +29,11 @@ function showAbout(jsonPart) {
         console.log(jsonPart);
         const cvHeader = document.createElement("h1");
         cvHeader.textContent = jsonPart.about.mainHeader;
-        infoContainer.appendChild(cvHeader);
+    infoContainer.appendChild(cvHeader);
+    
+    const cvPara = document.createElement("p");
+    cvPara.textContent = jsonPart.about.mainAbout;
+    infoContainer.appendChild(cvPara);
     }
 
 function showAboutMe(jsonPart) {
@@ -45,21 +49,24 @@ function showAboutMe(jsonPart) {
 function showEducationTitle(jsonPart) {
     const educationDiv = document.createElement("div");
     const educations = jsonPart.utbildningar;
+
     educations.forEach(function (education) {
         console.log(education);
         const educationTitle = document.createElement("h2");
         educationTitle.textContent = education.utbildning;
         console.log(educationTitle);
         educationDiv.appendChild(educationTitle);
-    });
 
-    const educationsDescr = jsonPart.utbildningar;
-    educationsDescr.forEach(function (education) {
         const educationPara = document.createElement("p");
         educationPara.textContent = education.utbBeskrivning;
-        educationDiv.appendChild(educationPara);
-    });
 
+        const educationSection = document.createElement("div"); 
+        educationSection.appendChild(educationTitle);
+        educationSection.appendChild(educationPara);
+
+        educationDiv.appendChild(educationSection)
+        
+    });
     infoContainer.appendChild(educationDiv);
 }
 
@@ -72,12 +79,9 @@ function showExperience(jsonPart) {
         experienceDiv.appendChild(experienceHeader);
         console.log(experienceHeader)
         // console.log(experiences);
-    });
 
-    const workDescriptions = jsonPart.erfarenheter;
-    workDescriptions.forEach(function (workDescription) { 
         const workDescriptionPara = document.createElement("p");
-        workDescriptionPara.textContent = workDescription.arbetsBeskrivning;
+        workDescriptionPara.textContent = experience.arbetsBeskrivning;
         experienceDiv.appendChild(workDescriptionPara);
     });
 
@@ -107,55 +111,37 @@ const omBtn = document.getElementById("om-btn");
 const utbBtn = document.getElementById("utb-btn");
 const erfBtn = document.getElementById("erf-btn");
 const extraBtn = document.getElementById("extra-btn");
-const aboutDiv = document.getElementById("info-container")
+const aboutBtn = document.getElementById("about-btn");
 
-omBtn.addEventListener("click", function () {
-    aboutDiv.innerHTML = "";
-    console.log("Clicked 'omBtn'")
-    // if (json) {
-    //     showAboutMe(json);
-    // } else {
-    //     console.log("JSON data not available");
-    // }
+// const aboutDiv = document.getElementById("info-container")
+
+aboutBtn.addEventListener("click", function () {
+    infoContainer.innerHTML = "";
+    console.log("Clicked 'aboutBtn'");
+    showAbout(json);
 });
 
-//  <li><button id="om-btn">Om mig</button></li>
-//                 <li><button id="utb-btn">Utbildningar</button></li>
-//                 <li><button id="erf-btn">Erfarenheter</button></li>
-//                 <li><button id="extra-btn">Extra</button></li>
+omBtn.addEventListener("click", function () {
+    infoContainer.innerHTML = "";
+    console.log("Clicked 'omBtn'");
+    showAboutMe(json);
+});
 
-// document.addEventListener("DOMContentLoaded", async function () {
-//     const jsonData = await getAbout();
-//     // getAbout();
+utbBtn.addEventListener("click", function () {
+    infoContainer.innerHTML = "";
+    console.log("Clicked 'utbBtn'"); 
+    showEducationTitle(json);
+});
 
-// 
+erfBtn.addEventListener("click", function () {
+    infoContainer.innerHTML = "";
+    console.log("Clicked 'erfBtn'");
+    showExperience(json);
+});
 
-    
-//     let aboutBtn = document.getElementById("about-btn")
-//     let omMigBtn = document.getElementById("om-btn")
-//     let utbBtn = document.getElementById("utb-btn")
-//     let erfBtn = document.getElementById("erf-btn")
-//     let extraBtn = document.getElementById("extra-btn")
+extraBtn.addEventListener("click", function () {
+    infoContainer.innerHTML = "";
+    console.log("Clicked 'extraBtn'"); 
+    showExtra(json);
+});
 
-    
-
-//         aboutBtn.addEventListener("click", function () {
-//             showAbout(jsonData.about);
-//         });
-
-//         omMigBtn.addEventListener("click", function () {
-//             showAbout(jsonData.omMig);
-//         });
-
-//         utbBtn.addEventListener("click", function () {
-//             showAbout(jsonData.utbildningar)
-//         });
-
-//         erfBtn.addEventListener("click", function () {
-//             showAbout(jsonData.erfarenheter)
-//         });
-
-//         extraBtn.addEventListener("click", function () {
-//             showAbout(jsonData.extra)
-//         });
-//     });

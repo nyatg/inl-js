@@ -35,12 +35,22 @@ footer a {
   padding: 5px;
 }
 
-.side-nav a:hover {
-  border-radius: 10px;
-  background-color: #dcd3d1;
-  color: #2f221c;
-  font-weight: bold;
+.side-nav button {
+  padding: 8px;
+  margin: 10px;
+  border-radius: 8px;
 }
+
+.side-nav button:hover {
+  background-color:#b07b62;
+}
+
+.side-nav button:focus{
+  background-color: #b07b62;
+}
+
+
+
 
 /*--------header----------*/
 
@@ -89,16 +99,17 @@ header a:hover {
   margin: 30px 5px 0 3px;
 }
 
-/* --- OM MIG INFO--*/
+/*-------------MAIN------*/
 
-.about-intro {
-  padding: 30px;
-  color: #2f221c;
+#info-container {
+  padding: 10px;
+}
+#info-container h2, h1 {
+  padding-bottom: 10px;
+  text-decoration: underline;
 }
 
-h2 {
-  margin-bottom: 5px;
-}
+
 
 /* --- FOOTER---*/
 
